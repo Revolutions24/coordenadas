@@ -139,7 +139,7 @@
     function showPosition(position) {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
-        const cota = position.coords.altitude || "Sin datos";
+        const cota = position.coords.altitude.toFixed(2) || "Sin datos";
 
         // Obtener la zona UTM seleccionada
         const selectedZone = document.getElementById('utmZone').value;
